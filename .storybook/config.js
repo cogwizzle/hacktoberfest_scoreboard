@@ -1,5 +1,4 @@
 import { configure } from '@storybook/react';
-import '../src/stories/index.css';
 
 const req = require.context('../src/components', true, /\.story\.js$/);
 
