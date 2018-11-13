@@ -7,4 +7,7 @@ import contestants from './contestants.mock';
 storiesOf('Scoreboard', module)
   .add('with contestants', () => (
     <Scoreboard contestants={contestants} />
+  ))
+  .add('without contestants', () => (
+    <Scoreboard contestants={[]} />
   ));

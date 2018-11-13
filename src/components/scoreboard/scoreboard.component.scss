@@ -1,0 +1,14 @@
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+
+}
+
+@media(min-width: 1000px) {
+  .scoreboard {
+    max-width: 1000px;
+    justify-self: center;
+    align-self: center;
+  }
+}

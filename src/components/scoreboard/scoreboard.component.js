@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { isEqual } from 'lodash';
 import { getUserPullRequest } from '../../services/pull-request.service';
 import { users as USERS } from '../../shared/constants';
+import ContestantComponent from './contestant/contestant.component';
+import './scoreboard.component.scss';
 
 import type { Contestant } from '../../shared/types/contestant.type';
 
@@ -40,7 +42,7 @@ export class Scoreboard extends React.Component<Props, State> {
 
   componentDidMount() {
     const { getContestants } = this.props;
-    getContestants();
+    if (getContestants) getContestants();
   }
 
   static getDerivedStateFromProps(nextProps: Props, prevState: State) {
@@ -65,13 +67,13 @@ export class Scoreboard extends React.Component<Props, State> {
 
     return (
       <div className="scoreboard">
-        <h1>Scoreboard</h1>
         {contestants
           .sort(orderByNumberOfPullRequest)
           .map(contestant => (
-            <div>{`${contestant.username} ${contestant.numberOfPullRequest}`}</div>
+            <ContestantComponent key={contestant.username} contestant={contestant} />
           ))
         }
+        {contestants.length < 1 ? 'No contestants found.' : ''}
       </div>
     );
   }

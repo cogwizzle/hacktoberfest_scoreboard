@@ -1,0 +1,25 @@
+.contestant {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  text-align: initial;
+  border: 1px solid black;
+  box-shadow: 5px 5px 3px darkgrey;
+  border-radius: 5px;
+
+  .username {
+    flex: 10;
+    padding: 1rem;
+  }
+
+  .count {
+    flex: 1;
+    background-color: lightgreen;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0; 
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+}
