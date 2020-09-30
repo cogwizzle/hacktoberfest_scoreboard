@@ -4,5 +4,6 @@ ship-it:
     - npm install
     - npm run build
     - node_modules/.bin/surge public udig-hacktoberfest-2020.surge.sh
-  except:
-    - master
+  only:
+    refs:
+      - master
