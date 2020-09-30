@@ -4,7 +4,7 @@ ship-it:
   script:
     - npm install
     - npm run build
-    - node_modules/.bin/surge public udig-hacktoberfest-2020.surge.sh
+    - node_modules/.bin/surge build udig-hacktoberfest-2020.surge.sh
   only:
     refs:
       - master
