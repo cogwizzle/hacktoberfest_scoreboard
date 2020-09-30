@@ -1,0 +1,9 @@
+preview:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+    - SLUG=$(echo ${CI_BUILD_REF_NAME} | sed 's/[^a-zA-Z0-9\-_]/-/g ; s/-\+/-/g')
+    - node_modules/.bin/surge public udig-hacktoberfest-2020.surge.sh
+  except:
+    - master
