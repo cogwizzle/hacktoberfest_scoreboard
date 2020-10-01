@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { isEqual } from 'lodash';
 import { getUserPullRequest } from '../../services/pull-request.service';
-import { users as USERS } from '../../shared/constants';
+import USERS from '../../users';
 import ContestantComponent from './contestant/contestant.component';
 import './scoreboard.component.scss';
 
