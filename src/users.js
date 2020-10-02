@@ -1,1 +1,1 @@
-export default ['jfehrman', 'gtodd876'];
+export default ['jfehrman', 'gtodd876', 'pthomas931'];
