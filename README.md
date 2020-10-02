@@ -7,4 +7,4 @@ You can see a produciton version of the website at
 
 ## Get on the board
 In order to get on the scoreboard you can put a Pull Request with your github
-username added to the [list of users](https://gitlab.com/jfehrman/hacktoberfest_scoreboard/-/blob/master/src/users.js).
+username added to the [list of users](https://github.com/jfehrman/hacktoberfest_scoreboard/blob/master/src/users.js).
