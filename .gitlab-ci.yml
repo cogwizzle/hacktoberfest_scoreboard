@@ -2,9 +2,16 @@ image: node:latest
 ship-it:
   stage: deploy
   script:
+    - domainStart = "udig"
+    - | -
+      if [CI_COMMIT_BRANCH == "friends"]
+        domainStart = "friends"
+      fi
     - npm install
     - npm run build
-    - node_modules/.bin/surge build udig-hacktoberfest-2020.surge.sh
+    - node_modules/.bin/surge build "$[domainStart]-hacktoberfest-2020.surge.sh"
   only:
     refs:
       - master
+      - friends
+
