@@ -2,8 +2,8 @@ image: node:latest
 ship-it:
   stage: deploy
   script:
+    - domainStart = "udig"
     - |-
-        domainStart = "udig"
         if [[ $CI_COMMIT_Branch == "friends" ]]; then
           domainStart = "friends"
         fi
